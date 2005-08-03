@@ -1,7 +1,7 @@
 Changes
+lib/Posy/Plugin/Flickr/Photo.pm
 Makefile.PL
 MANIFEST
+META.yml			Module meta-data (added by MakeMaker)
 README
 t/Posy-Plugin-Flickr-Photo.t
-lib/Posy/Plugin/Flickr/Photo.pm
-META.yml                                 Module meta-data (added by MakeMaker)

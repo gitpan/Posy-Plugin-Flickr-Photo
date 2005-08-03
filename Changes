@@ -3,7 +3,11 @@
 
 ---
 
-## 0.1   20050802
+## 0.2  20050802
+
+* FIX: Wrong lexical scope for Flickr API key
+
+## 0.1  20050802
     
 * Initial release of Posy::Plugin::Flickr::Photo
 

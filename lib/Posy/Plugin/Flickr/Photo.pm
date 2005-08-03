@@ -1,7 +1,7 @@
 package Posy::Plugin::Flickr::Photo;
 
 #
-# $Id: Photo.pm,v 1.2 2005/08/03 03:07:07 blair Exp $
+# $Id: Photo.pm,v 1.4 2005/08/03 04:22:43 blair Exp $
 #
 
 use 5.008001;
@@ -17,11 +17,11 @@ Posy::Plugin::Flickr::Photo - Simple inclusion of Flickr photos
 
 =head1 VERSION
 
-This document describes Posy::Plugin::Flickr::Photo version B<0.1>.
+This document describes Posy::Plugin::Flickr::Photo version B<0.2>.
 
 =cut
 
-our $VERSION = 0.1;
+our $VERSION = 0.2;
 
 =head1 SYNOPSIS
 
@@ -68,7 +68,7 @@ sub init {
   my $cf = File::Spec->catfile(
     $self->{config_dir}, 'plugins', 'flickr-photo'
   );
-  my %cf = $self->read_config_file($cf);
+  %cf = $self->read_config_file($cf);
   unless (defined $cf{api_key}) {
     warn "No Flickr API key defined!\n";  
   }
@@ -124,6 +124,7 @@ sub _api_get {
 
 # Initialize L<Flickr::API>
 sub _api_init {
+  my $self = shift;
   return new Flickr::API({ key => $cf{api_key} });
 } # _api_init()
 
