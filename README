@@ -1,0 +1,53 @@
+
+# Posy::Plugin::Flickr::Photo version 0.1
+
+---
+
+This module simplifies including and linking to images hosted at
+Flickr.
+
+## INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+## DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+  Posy
+  Posy::Core
+  Posy::Plugin::Cache::File
+  Flickr::API
+  XML::XPath
+
+## ACTIVATION
+
+Add this module to Posy's @plugins array.
+
+Add the "flickr_photo" action to Posy's @entry_actions array before
+"render_entry".
+
+## CONFIGURATION
+
+Create "$config_dir/plugins/flickr-photo":
+
+  ---
+  api_key: <your flickr api key>
+
+## USE
+
+Add Flickr-hosted images by inserted "{{photo:<photo id>}}" into your
+entries.
+
+## COPYRIGHT AND LICENSE
+
+Copyright (C) 2005 by blair christensen.
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
