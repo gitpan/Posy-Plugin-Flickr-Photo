@@ -1,5 +1,5 @@
 
-# Posy::Plugin::Flickr::Photo version 0.2
+# Posy::Plugin::Flickr::Photo version 0.3
 
 ---
 
@@ -21,7 +21,7 @@ This module requires these other modules and libraries:
 
   Posy
   Posy::Core
-  Posy::Plugin::Cache::File
+  Cache::File
   Flickr::API
   XML::XPath
 

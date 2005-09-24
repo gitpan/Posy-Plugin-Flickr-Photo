@@ -8,7 +8,7 @@ WriteMakefile(
     PREREQ_PM         => {
       Posy                      => 0.97,
       Posy::Core                => 0.97,
-      Posy::Plugin::Cache::File => 0.1,
+      Cache::File               => 0,
       Flickr::API               => 0,
       Test::More                => 0,
       XML::XPath                => 0

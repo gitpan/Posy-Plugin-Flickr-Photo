@@ -3,6 +3,10 @@
 
 ---
 
+## 0.3  20050924
+
+* Internalize caching as Posy::Plugin::Cache::File has been deprecated.
+
 ## 0.2  20050802
 
 * FIX: Wrong lexical scope for Flickr API key

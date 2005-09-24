@@ -1,14 +1,14 @@
 package Posy::Plugin::Flickr::Photo;
 
 #
-# $Id: Photo.pm,v 1.4 2005/08/03 04:22:43 blair Exp $
+# $Id: Photo.pm,v 1.5 2005/09/24 21:25:00 blair Exp $
 #
 
 use 5.008001;
 use strict;
 use warnings;
+use Cache::File   qw();
 use Flickr::API;
-use Posy::Plugin::Cache::File 0.1;
 use XML::XPath;
 
 =head1 NAME
@@ -17,11 +17,11 @@ Posy::Plugin::Flickr::Photo - Simple inclusion of Flickr photos
 
 =head1 VERSION
 
-This document describes Posy::Plugin::Flickr::Photo version B<0.2>.
+This document describes Posy::Plugin::Flickr::Photo version B<0.3>.
 
 =cut
 
-our $VERSION = 0.2;
+our $VERSION = 0.3;
 
 =head1 SYNOPSIS
 
@@ -134,7 +134,7 @@ sub _cache_init {
   my $root = File::Spec->catfile(
     $self->{state_dir}, 'flickr-photo'
   );
-  $self->{cache} = Posy::Plugin::Cache::File->new(
+  $self->{cache} = Cache::File->new(
     cache_root      => $root,
     default_expires => '1d',
     lock_level      => Cache::File::LOCK_LOCAL
@@ -154,7 +154,7 @@ sub _embed_and_link_img {
 
 =head1 SEE ALSO
 
-L<Perl>, L<Posy>, L<Flickr::API>, L<Posy::Plugin::Cache::File>,
+L<Perl>, L<Posy>, L<Flickr::API>, L<Cache::File>,
 L<XML::XPath>, L<http://flickr.com/>
 
 =head1 TODO
@@ -166,8 +166,6 @@ L<XML::XPath>, L<http://flickr.com/>
 =item * Make input pattern identifier configurable
 
 =item * Make output configurable
-
-=item * Make L<Posy::Plugin::Cache::File> configurable
 
 =back
 
